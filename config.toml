@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://jonsnow.com"
+base_url = "https://netoun.github.io/ntun/"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
