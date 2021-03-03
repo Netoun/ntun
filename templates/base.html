@@ -14,9 +14,9 @@
     <div class="app">
       <nav class="nav">
         <a {% if current_path == "/" or current_path == "fr/" %} class="nav_item active" {% else %} class="nav_item" {% endif %}
-           {% if lang == "en" %} href="/" {% else %} href="{{"/" ~ lang}}" {% endif %}
+           {% if lang == "en" %} href="/" {% else %} href="{{config.base_url ~ lang}}" {% endif %}
         >
-          <img src="/hello.png">
+          <img src="{{config.base_url ~ '/hello.png' }}">
         </a>
         <div class="nav-right">
           <small class="languages">
@@ -37,7 +37,7 @@
             {% endif %}
           </small>
           <a {% if current_path is containing("/about") %}class="nav_item active"{% else %}class="nav_item"{% endif %}
-             {% if lang == "en" %} href="/about" {% else %} href="{{"/" ~ lang ~ "/about"}}" {% endif %}
+             {% if lang == "en" %} href="{{config.base_url ~ 'about' }}" {% else %} href="{{config.base_url ~ lang ~ "/about"}}" {% endif %}
           >
              <span> About me </span>
           </a>
