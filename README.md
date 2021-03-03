@@ -1,6 +1,6 @@
-# Ntun
+# **Ntun**
 
-[scrennshot]: https://github.com/Netoun/ntun/screenshot.png "Screenshot"
+![alt text](screenshot.png "Screenshoot")
 
 **Live demo** : https://netoun.github.io/ntun/
 ## Contents
