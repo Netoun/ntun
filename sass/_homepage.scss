@@ -1,0 +1,152 @@
+@keyframes spin {
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes skew {
+  0% {
+    transform: skew(0deg);
+  }
+  25% {
+    transform: skew(3deg);
+  }
+  50% {
+    transform: skew(2deg);
+  }
+  75% {
+    transform: skew(5deg);
+  }
+  100% {
+    transform: skew(0deg);
+  }
+}
+
+@keyframes fluid-border {
+  0% {
+    border-radius: 165px 200px 180px 160px;
+  }
+  25% {
+    border-radius: 200px 150px 190px 200px;
+  }
+  50% {
+    border-radius: 190px 200px 100px 186px;
+  }
+  75% {
+    border-radius: 200px 175px 151px 180px;
+  }
+  100% {
+    border-radius: 165px 200px 180px 160px;
+  }
+}
+
+
+.homepage {
+  text-align: center;
+  .img_profile_wrapper {
+    margin: auto;
+    border-radius: 50%;
+    position: relative;
+    width: 15rem;
+    height: 15rem;
+
+    .circle {
+      z-index: -1;
+      position: block;
+      border-radius: inherit;
+      background: white;
+      width: inherit;
+      height: inherit;
+      animation: spin 5s linear infinite, fluid-border 4s ease-in-out infinite, skew 6s linear infinite;
+    }
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: inherit;
+      width: 14rem;
+      height: 14rem;
+    }
+
+    @include sm {
+      padding: .5em 2em;
+      font-size: 2em;
+      width: 26rem;
+      height: 26rem;
+
+      .circle {
+        width: inherit;
+        height: inherit;
+      }
+      img {
+        width: 25rem;
+        height: 25rem;
+      }
+    }
+
+    @include lg {
+      padding: .5em 2em;
+      font-size: 2em;
+      width: 15rem;
+      height: 15rem;
+
+      .circle {
+        width: inherit;
+        height: inherit;
+      }
+      img {
+        width: 14rem;
+        height: 14rem;
+      }
+    }
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    line-height: 1.5em;
+
+    margin-top: 2em;
+
+    & > * {
+      flex-basis: 1.5em;
+    }
+
+    .content_title {
+      display: flex;
+      flex-direction: column;
+      font-size: 1.8em;
+      font-weight: 600;
+    }
+
+    .content_subtitle {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .content_icons {
+      margin: 1em;
+      font-size: 1.5em;
+      .icon_wrapper{
+        margin: 0 .2em;
+        text-decoration: none;
+        text-shadow: 0 0 6px rgba(202,228,225,0.25);
+        &:hover {
+          text-shadow: 2px 0 2px rgba($darkThrd, 0.75), -2px 0 2px rgba($darkScnd, 0.75);
+        }
+      }
+    }
+
+    @include sm {
+      padding: .5em 2em;
+      font-size: 2em;
+    }
+
+    @include lg {
+      font-size: 1em;
+    }
+  }
+}

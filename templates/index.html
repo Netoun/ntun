@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="homepage">
+  <div class="img_profile_wrapper">
+    <div class="circle"></div>
+    <img src="/{{ config.extra.author_image }}">
+  </div>
+  <div class="content">
+    <div class="content_title">
+      {{ config.extra.author }}
+    </div>
+    <div class="content_subtitle">
+      <span class="font-medium"> {{ config.extra.job }} </span>
+      <span class="font-thin"> {{ config.extra.description }} </span>
+    </div>
+    <div class="content_icons">
+      {% for link in config.extra.links %}
+        <a class="icon_wrapper" href="{{ link.url }}">
+          <i class="{{ link.icon }}"></i>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock content %}

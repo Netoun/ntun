@@ -1,0 +1,186 @@
+html,
+body,
+.app {
+  margin: 0;
+  min-height: 100vh;
+}
+
+html {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+body {
+  color: $darkPrim;
+  background-color: $darkBgrd;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.nav {
+  z-index: 1;
+  width: 100%;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0.5em 2em;
+  flex: 0 0 5em;
+
+  font-size: 0.8em;
+  img {
+    &:hover {
+      filter: drop-shadow(0 0 5px rgba(202,228,225,0.5)) drop-shadow(-5px 0 5px rgba($darkScnd, 0.5)) drop-shadow(5px 0 5px rgba($darkThrd, 0.5));
+    }
+    width: 6rem;
+  }
+
+  @include sm {
+    font-size: 2em;
+    img {
+      width: 10rem;
+    }
+  }
+
+  @include lg {
+    width: 75%;
+    margin: auto;
+    font-size: 1em;
+    img {
+      &:hover {
+        filter: drop-shadow(0 0 4px rgba(202,228,225,0.5)) drop-shadow(-4px 0 3px rgba($darkScnd, 0.5)) drop-shadow(4px 0 3px rgba($darkThrd, 0.5));
+      }
+      transition: .2s;
+      width: 8rem;
+    }
+  }
+
+  .nav-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+
+    .languages {
+      margin-right: 2rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      @include sm {
+        margin-right: 3rem;
+      }
+
+      @include lg {
+        margin-left: 2rem;
+      }
+
+      & > * {
+        margin-left: .5rem;
+
+        @include sm {
+          margin-left: 1rem;
+        }
+
+        @include lg {
+          margin-left: .5rem;
+        }
+
+        &.active {
+          text-shadow: 2px 2px 1px $darkCard, -2px -2px 1px $darkCard;
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+
+  .nav_item {
+    &.active {
+      text-shadow: 0 0 6px rgba(202,228,225,0.5);
+      img {
+        filter: drop-shadow(0 0 6px rgba(202,228,225,0.5)) drop-shadow(-.2rem 0 6px rgba(255, 8, 8, 0.5)) drop-shadow(.2rem 0 6px rgba(0, 217, 255, 0.5));
+      }
+      span {
+        position: relative;
+        display: inline-block;
+
+        &:before{
+          transition: .2s;
+          box-shadow: 0 0 6px rgba(202,228,225, 1);
+          position: absolute;
+          height: 2px;
+          width: 50%;
+          left: 25%;
+          transform: translate(0, -50%);
+          bottom: -5px;
+          background: white;
+          display: block;
+          content: "";
+          border-radius: 2px;
+        }
+        &:hover:before {
+          box-shadow: 3px 0 2px rgba($darkThrd, 0.75), -3px 0 2px rgba($darkScnd, 0.75);
+        }
+      }
+    }
+    &:hover {
+      text-shadow: 2px 0 2px rgba($darkThrd, 0.75), -2px 0 2px rgba($darkScnd, 0.75);
+    }
+  }
+}
+
+.container {
+  height: auto;
+  display: flex;
+  flex: 1 1 auto;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  display: flex;
+  flex: 0 0 4em;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+
+  .copyright {
+    color: $darkScnd;
+  }
+
+  @include sm {
+    font-size: 2em;
+  }
+
+  @include lg {
+    margin: auto;
+    font-size: 1em;
+  }
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-thin {
+  font-weight: 300;
+}
+
+a {
+  color: $darkPrim;
+  text-decoration: none;
+  font-weight: 600;
+  transition: .2s;
+}
