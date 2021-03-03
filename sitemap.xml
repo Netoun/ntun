@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://netoun.github.io/ntun/</loc>
+    </url>
+    <url>
+        <loc>https://netoun.github.io/ntun/about/</loc>
+    </url>
+    <url>
+        <loc>https://netoun.github.io/ntun/about/biography/</loc>
+        <lastmod>2021-02-19</lastmod>
+    </url>
+    <url>
+        <loc>https://netoun.github.io/ntun/about/personality/</loc>
+        <lastmod>2021-02-18</lastmod>
+    </url>
+    <url>
+        <loc>https://netoun.github.io/ntun/about/relationships/</loc>
+        <lastmod>2021-02-17</lastmod>
+    </url>
+</urlset>
