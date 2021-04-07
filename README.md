@@ -40,10 +40,10 @@ job = "King of the north"
 description = "Dragons & Aunt ❤️"
 
 links = [
-    { url = "", icon = "fab fa-github"},
-    { url = "", icon = "fab fa-twitter"},
-    { url = "", icon = "fab fa-linkedin"},
-    { url = "mailto:", icon = "fas fa-envelope"}
+    { url = "", title="", icon = "fab fa-github"},
+    { url = "", title="", icon = "fab fa-twitter"},
+    { url = "", title="", icon = "fab fa-linkedin"},
+    { url = "mailto:"title="", icon = "fas fa-envelope"}
 ]
 
 # if you add languages, put your emoji flag on array
