@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html,
 body,
 .app {
@@ -34,34 +40,24 @@ body {
   justify-content: space-between;
   align-items: center;
 
-  padding: 0.5em 2em;
+  padding: 0.5em 1em;
   flex: 0 0 5em;
 
-  font-size: 0.8em;
   img {
     &:hover {
-      filter: drop-shadow(0 0 5px rgba(202,228,225,0.5)) drop-shadow(-5px 0 5px rgba($darkScnd, 0.5)) drop-shadow(5px 0 5px rgba($darkThrd, 0.5));
+      filter: drop-shadow(0 0 5px rgba(202,228,225,0.2)) drop-shadow(-2px 0 5px rgba($darkScnd, 0.25)) drop-shadow(2px 0 5px rgba($darkThrd, 0.25));
     }
-    width: 6rem;
   }
 
-  @include sm {
-    font-size: 2em;
-    img {
-      width: 10rem;
-    }
-  }
 
   @include lg {
     width: 75%;
     margin: auto;
-    font-size: 1em;
+    font-size: 1.2em;
     img {
-      &:hover {
-        filter: drop-shadow(0 0 4px rgba(202,228,225,0.5)) drop-shadow(-4px 0 3px rgba($darkScnd, 0.5)) drop-shadow(4px 0 3px rgba($darkThrd, 0.5));
-      }
+      width: 140px;
+      height: 100px;
       transition: .2s;
-      width: 8rem;
     }
   }
 
@@ -78,10 +74,6 @@ body {
       justify-content: space-between;
       align-items: center;
 
-      @include sm {
-        margin-right: 3rem;
-      }
-
       @include lg {
         margin-left: 2rem;
       }
@@ -89,27 +81,29 @@ body {
       & > * {
         margin-left: .5rem;
 
-        @include sm {
-          margin-left: 1rem;
-        }
-
         @include lg {
           margin-left: .5rem;
         }
 
         &.active {
           text-shadow: 2px 2px 1px $darkCard, -2px -2px 1px $darkCard;
-          font-size: 1.2rem;
+          font-size: 1.5rem;
         }
       }
     }
   }
 
-  .nav_item {
+  .nav-item {
+    &:hover {
+      transform: translateY(-2px);
+    }
+    &:active {
+      transform: translateY(2px);
+    }
     &.active {
       text-shadow: 0 0 6px rgba(202,228,225,0.5);
       img {
-        filter: drop-shadow(0 0 6px rgba(202,228,225,0.5)) drop-shadow(-.2rem 0 6px rgba(255, 8, 8, 0.5)) drop-shadow(.2rem 0 6px rgba(0, 217, 255, 0.5));
+        filter: drop-shadow(0 0 5px rgba(202,228,225,0.2)) drop-shadow(-2px 0 5px rgba($darkScnd, 0.4)) drop-shadow(2px 0 5px rgba($darkThrd, 0.4));
       }
       span {
         position: relative;
@@ -160,13 +154,10 @@ body {
     color: $darkScnd;
   }
 
-  @include sm {
-    font-size: 2em;
-  }
 
   @include lg {
     margin: auto;
-    font-size: 1em;
+    font-size: 1.2em;
   }
 }
 

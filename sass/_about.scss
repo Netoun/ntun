@@ -6,10 +6,6 @@
     font-weight: 400;
   }
 
-  a {
-    text-decoration: underline;
-  }
-
   font-weight: 400;
   padding: 1em;
 
@@ -34,7 +30,7 @@
     border-radius: 0.5rem;
     padding: 0.25rem 1rem 0.5rem;
 
-    h3 {
+    h2 {
       font-weight: 500;
       color: $darkScnd;
 
@@ -50,14 +46,6 @@
     p {
       margin: 0.5em 0;
     }
-
-    @include md {
-      padding: 0.5rem 2rem 1rem;
-    }
-  }
-
-  @include sm {
-    font-size: 2em;
   }
 
   @include lg {
